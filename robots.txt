@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /skills.html
+Allow: /health.html
+Allow: /career.html
+Allow: /finance.html
+Allow: /relationships.html
+Allow: /technology.html
+Allow: /environment.html
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Optimize for low bandwidth
+Crawl-delay: 5 

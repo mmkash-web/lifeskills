@@ -1,0 +1,302 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.6 Arial,sans-serif;
+    color: #333;
+    max-width: 100%;
+    background: #f9f9f9;
+}
+
+/* Typography */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Navigation */
+nav {
+    background: #2c3e50;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    margin: 0 0.5em 0.5em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    display: block;
+    background: #34495e;
+}
+
+/* Layout */
+header, main, footer {
+    padding: 1em;
+}
+
+.hero {
+    background: #3498db;
+    color: #fff;
+    padding: 2em 1em;
+    text-align: center;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.features, .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.feature {
+    flex: 1 1 300px;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+/* Content sections */
+.skill-category {
+    background: #fff;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
+
+.skill-category > ul {
+    list-style: none;
+}
+
+.skill-category > ul > li {
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.skill-category ul ul {
+    list-style: disc;
+    margin: 0.5em 0 0 1.5em;
+}
+
+.skill-category ul ul li {
+    font-weight: normal;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.skill-category li p {
+    font-weight: normal;
+    margin: 0.5em 0;
+    color: #666;
+}
+
+/* Quick Tips */
+.quick-tips {
+    background: #fff;
+    padding: 1.5em;
+    margin: 2em auto;
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+.quick-tips ul {
+    list-style: disc;
+    margin-left: 1.5em;
+}
+
+.quick-tips li {
+    margin-bottom: 0.8em;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 2em;
+}
+
+/* Icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* Feature phone optimizations */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        margin: 0.25em 0;
+    }
+
+    .feature, .skill-category {
+        margin: 1em 0;
+        padding: 1em;
+    }
+
+    .hero {
+        padding: 1.5em 1em;
+    }
+
+    .skill-category ul ul {
+        margin-left: 1em;
+    }
+}
+
+/* Basic smartphone optimizations */
+@media (min-width: 321px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    .feature, .skill-category {
+        flex: 1 1 100%;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+
+    .skill-category {
+        padding: 1.2em;
+    }
+}
+
+/* Health Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #3498db;
+}
+
+.card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 0.8em;
+    padding-left: 1.2em;
+    position: relative;
+}
+
+.card ul li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.card-section {
+    margin-bottom: 1.5em;
+}
+
+.card-section h4 {
+    color: #34495e;
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+}
+
+/* Feature phone optimizations for cards */
+@media (max-width: 320px) {
+    .card {
+        padding: 1em;
+        margin: 0.5em 0;
+    }
+    
+    .card-grid {
+        gap: 1em;
+        padding: 0.5em;
+    }
+}

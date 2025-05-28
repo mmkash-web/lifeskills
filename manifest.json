@@ -1,0 +1,20 @@
+{
+  "name": "Life Skills Academy",
+  "short_name": "Life Skills",
+  "description": "Free educational resources for essential life skills",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#2c3e50",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+  "lang": "en-US",
+  "categories": ["education", "lifestyle", "health"],
+  "icons": [
+    {
+      "src": "images/icons.svg#icon-home",
+      "type": "image/svg+xml",
+      "sizes": "24x24"
+    }
+  ]
+} 
